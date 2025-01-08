@@ -543,35 +543,25 @@ html, body {
     bottom: 20px;
     right: 20px;
     z-index: 1000;
-    
-    /* Circular Shape and Styling */
     width: 60px;
     height: 60px;
-    border-radius: 50%; /* Perfect Circle */
-    background: rgba(0, 93, 255, 0.75); /* Blue Color with Transparency */
+    border-radius: 50%;
+    background: rgba(0, 93, 255, 0.75);
+    color: white;
+    font-size: 20px;
     border: none;
     cursor: pointer;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
     outline: none;
-    transition: background 0.3s ease, transform 0.2s ease;
-    display: none; /* Hidden initially */
+    display: none;
+    text-align: center;
+    line-height: 60px;
 }
 
-/* Adding the Arrow Inside the Circle */
+/* Adding the Arrow */
 #myBtn::before {
-    content: "";
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%) rotate(-45deg);
-    border-top: 5px solid white; /* Arrow effect using borders */
-    border-right: 5px solid white;
-    width: 20px;
-    height: 20px;
-}
-
-/* Hover Effect */
-#myBtn:hover {
-    background: rgba(0, 93, 200, 0.9); /* Darker blue on hover */
-    transform: scale(1.1); /* Slight enlargement on hover */
+    content: "↑";
+    position: relative;
+    font-size: 24px;
+    color: white;
 }
