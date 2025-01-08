@@ -537,22 +537,36 @@ html, body {
   }
 }
 
-#myBtn {
-  display: none; /* Hidden by default */
-  position: fixed; /* Fixed/sticky position */
-  bottom: 20px; /* Place the button at the bottom of the page */
-  right: 30px; /* Place the button 30px from the right */
-  z-index: 99; /* Make sure it does not overlap */
-  border: none; /* Remove borders */
-  outline: none; /* Remove outline */
-  background-color: rgb(0, 93, 255, 0.5); /* Set a background color */
-  color: white; /* Text color */
-  cursor: pointer; /* Add a mouse pointer on hover */
-  padding: 15px; /* Some padding */
-  border-radius: 10px; /* Rounded corners */
-  font-size: 18px; /* Increase font size */
+/* Styling the circular scroll-to-top button */
+#my {
+    position: fixed; /* Fixed position on screen */
+    bottom: 20px; /* Distance from the bottom */
+    right: 20px; /* Distance from the right side */
+    z-index: 1000; /* Ensure it stays above other elements */
+    
+    /* Circular Button Design */
+    width: 60px;
+    height: 60px;
+    border-radius: 50%; /* Makes it a perfect circle */
+    background-color: #ff8b24; /* Orange background */
+    color: white; /* White arrow icon */
+    font-size: 30px; /* Larger icon size */
+    border: none;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2); /* Soft shadow for depth */
+    outline: none;
+    transition: background 0.3s ease, transform 0.2s ease; /* Smooth hover effects */
+    text-align: center;
+    line-height: 60px; /* Centers the icon vertically */
 }
 
-#myBtn:hover {
-  background-color: #555; /* Add a dark-grey background on hover */
+/* Hover Effect */
+#my:hover {
+    background-color: #e6771a; /* Darker orange on hover */
+    transform: scale(1.1); /* Slightly enlarges on hover */
+}
+
+/* Button Hidden by Default */
+#my {
+    display: none; /* Hidden initially */
 }
