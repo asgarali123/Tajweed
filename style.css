@@ -536,3 +536,24 @@ html, body {
       opacity: 0.3;
   }
 }
+
+#scrollToTopBtn {
+    display: none; /* Hidden by default */
+    position: fixed; /* Fixed position */
+    bottom: 20px; /* 20px from the bottom */
+    right: 20px; /* 20px from the right */
+    z-index: 99; /* Make sure it is on top of other elements */
+    font-size: 18px; /* Button size */
+    border: none; /* No border */
+    outline: none; /* No outline */
+    background-color: #555; /* Dark gray background */
+    color: white; /* White text */
+    cursor: pointer; /* Pointer cursor on hover */
+    padding: 15px; /* Some padding */
+    border-radius: 10px; /* Rounded corners */
+    transition: opacity 0.3s; /* Smooth transition effect */
+}
+
+#scrollToTopBtn:hover {
+    background-color: #333; /* Darker gray on hover */
+}
