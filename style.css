@@ -537,61 +537,41 @@ html, body {
   }
 }
 
-body {
-    display: grid;
-    grid-template-columns: auto 0px; /* Content with button aligned */
-}
-
-/* Container to hold the button and manage visibility with gradient masking */
-.container-top {
-    --offset: 100px; /* Distance from the top before the button appears */
-    --fade: 80px;    /* Smoothing fade effect */
+/* Circular Scroll-to-Top Button */
+#myBtn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 1000;
     
-    display: flex;
-    align-items: flex-end;
-    width: 60px;            /* Button width */
-    justify-self: end;
-    justify-content: flex-end;
-    
-    /* Gradient mask for fade effect when scrolling */
-    -webkit-mask: linear-gradient(
-        #0000 calc(100vh + var(--offset)),
-        #000 calc(100vh + var(--offset) + var(--fade))
-    );
-}
-
-/* Styling the circular scroll-to-top button */
-.top {
-    position: sticky;
-    bottom: 20px;      /* Distance from bottom */
-    margin-right: 10px; /* Space from right */
-
-    /* Circular Button Design */
-    width: 100%; 
-    aspect-ratio: 1; /* Makes the button a perfect circle */
-    background: rgba(0, 93, 255, 0.75); /* Blue with transparency */
-    border-radius: 50%; /* Circular Shape */
+    /* Circular Shape and Styling */
+    width: 60px;
+    height: 60px;
+    border-radius: 50%; /* Perfect Circle */
+    background: rgba(0, 93, 255, 0.75); /* Blue Color with Transparency */
     border: none;
     cursor: pointer;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Soft shadow for depth */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     outline: none;
     transition: background 0.3s ease, transform 0.2s ease;
+    display: none; /* Hidden initially */
 }
 
-/* Adding the arrow inside the button using a pseudo-element */
-.top:before {
+/* Adding the Arrow Inside the Circle */
+#myBtn::before {
     content: "";
     position: absolute;
-    inset: 30%;
-    transform: translateY(20%) rotate(-45deg); /* Rotated arrow design */
-    border-top: 5px solid white; /* White arrow border styling */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(-45deg);
+    border-top: 5px solid white; /* Arrow effect using borders */
     border-right: 5px solid white;
+    width: 20px;
+    height: 20px;
 }
 
 /* Hover Effect */
-.top:hover {
+#myBtn:hover {
     background: rgba(0, 93, 200, 0.9); /* Darker blue on hover */
     transform: scale(1.1); /* Slight enlargement on hover */
 }
-
-
