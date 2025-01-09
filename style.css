@@ -38,7 +38,7 @@ h1, h2, h3, h4, p, a, button, .btn, .card-body, th, td, tr, table, strong {
 }
 
 /* Containers */
-.container {
+.login {
   padding: 20px;
   background-color: rgba(255, 255, 255, 0.8);
   border-radius: 10px;
