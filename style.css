@@ -544,3 +544,26 @@ html, body {
   border: 1px solid #00aa00;
   border-radius: 10px;
 }
+
+/* style.css */
+
+/* Login Form Styling */
+.test {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+
+#loginForm {
+  max-width: 400px;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  background: white;
+}
+
+#protectedContent {
+  padding: 20px;
+}
