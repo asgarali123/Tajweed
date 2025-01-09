@@ -166,3 +166,26 @@ footer {
     margin-top: auto;
     flex-shrink: 0;
 }
+
+/* Login Form Styling */
+#usernameInput, #passwordInput {
+    padding: 10px;
+    margin: 10px 0;
+    width: 100%;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+/* Message Styling */
+#message {
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+/* Protected Content Styling */
+#protectedContent {
+    padding: 20px;
+    background: rgba(0, 255, 0, 0.1);
+    border: 1px solid #00aa00;
+    border-radius: 10px;
+}
