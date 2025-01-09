@@ -560,8 +560,12 @@ html, body {
 
 /* Adding the Arrow */
 #myBtn::before {
-    content: "↑";
-    position: relative;
+    content: "^"; /* Arrow icon */
+    position: absolute; /* Position it relative to the button */
+    top: 50%;         /* Center vertically */
+    left: 50%;        /* Center horizontally */
+    transform: translate(-50%, -50%); /* Adjust position for perfect centering */
     font-size: 24px;
     color: white;
 }
+
