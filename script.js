@@ -28,3 +28,22 @@ bootstrapScript.src = "https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/
 bootstrapScript.type = "text/javascript";
 bootstrapScript.async = true;
 document.head.appendChild(bootstrapScript);
+
+// Function to show the overlay and button with delays
+window.onload = function() {
+  const overlay = document.getElementById('messageOverlay');
+  const button = document.getElementById('overlayButton');
+
+  // Show overlay immediately
+  overlay.style.display = 'flex';
+
+  // Show button after 3 seconds
+  setTimeout(() => {
+    button.classList.remove('hidden');
+  }, 3000);
+
+  // Optional: Hide overlay when button is clicked
+  button.onclick = function() {
+    overlay.style.display = 'none';
+  };
+};
