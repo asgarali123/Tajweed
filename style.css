@@ -568,69 +568,33 @@ html, body {
   padding: 20px;
 }
 
-/* Overlay styling */
-.overlay {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(17, 0, 255, 0.329); /* Softer green tint for theme consistency */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    z-index: 1000;
-    backdrop-filter: blur(12px);
-    -webkit-backdrop-filter: blur(12px);
-    box-shadow: inset 0 0 50px rgba(0, 0, 0, 0.7); /* Darker focus effect */
+.bismillah {
+  width: 100%;              /* Makes the image take full width of the container */
+  height: auto;             /* Maintains the aspect ratio */
+  opacity: 0.80;            /* Semi-transparent effect */
+  padding-top: 55px;
+  object-fit: contain;      /* Ensures the entire image fits without cropping */
+  max-height: 150px;        /* Restricts height while keeping responsiveness */
 }
 
-/* Content styling */
-.overlay-content {
-    text-align: center;
-    color: #ffffff;
-    font-weight: bold;
-    font-size: 1.2rem;
-    padding: 20px;
-    border-radius: 15px;
-    background: rgba(15, 23, 42, 0.85); /* Dark blue-grey for blur */
-    box-shadow: rgba(0, 0, 0, 0.5) 0px 4px 12px;
+@media (max-width: 768px) {
+  .bismillah {
+      max-height: 120px;
+      padding-top: 20px;
+  }
 }
 
-/* Hidden button styling */
-.hidden {
-    display: none;
-}
-
-#overlayButton {
-    margin-top: 20px;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 25px;
-    background: rgba(212, 175, 55, 1); /* Gold for contrast */
-    color: #333;
-    font-weight: bold;
-    cursor: pointer;
-    transition: background 0.3s ease;
-}
-
-#overlayButton:hover {
-    background: rgba(255, 215, 0, 1);
-    color: #000;
-}
-
-/* Card Styling */
-.card_overlay {
-    width: 97%;
-    height: 300px;
-    background: rgb(223, 225, 235);
-    border-radius: 50px;
-    box-shadow: rgba(0, 0, 0, 0.2) 0px -23px 25px 0px inset, 
-                rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, 
-                rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, 
-                rgba(0, 0, 0, 0.06) 0px 2px 1px, 
-                rgba(0, 0, 0, 0.09) 0px 4px 2px, 
-                rgba(0, 0, 0, 0.09) 0px 8px 4px, 
-                rgba(0, 0, 0, 0.09) 0px 16px 8px, 
-                rgba(0, 0, 0, 0.09) 0px 32px 16px;
+.centerfold {
+  display: flex;                 /* Enables flexbox for centering */
+  justify-content: center;       /* Centers content horizontally */
+  align-items: center;           /* Centers content vertically */
+  text-align: center;
+  background-color: rgba(255, 255, 255, 0.7); 
+  width: 90.5%;                    /* Adjusting width */
+  height: auto;                  /* Adjust height dynamically */
+  margin: auto;                  /* Centers the entire box on the page */
+  position: relative;            /* Removed absolute positioning */
+  border-radius: 20px;           /* Adds rounded corners */
+  padding: 20px;                 /* Adds spacing inside the box */
+  box-shadow: 0 0 10px rgba(0,0,0,0.1); /* Optional shadow for a better look */
 }

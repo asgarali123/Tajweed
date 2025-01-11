@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Arabic Alphabet</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<h1>Click on the Arabic Letters to Hear Their Sounds</h1>
+<img src="noor.png" usemap="#arabicMap" alt="Arabic Alphabet" width="600" height="800">
+
+<map name="arabicMap">
+    <!-- Example Areas (adjust coordinates based on your image) -->
+    <area shape="rect" coords="50,50,100,100" alt="Alif" onclick="playSound('sounds/alif.mp3')">
+    <area shape="rect" coords="120,50,170,100" alt="Baa" onclick="playSound('sounds/baa.mp3')">
+    <area shape="rect" coords="190,50,240,100" alt="Taa" onclick="playSound('sounds/taa.mp3')">
+</map>
+
+<!-- JavaScript -->
+<script src="script.js"></script>
+
+</body>
+</html>
