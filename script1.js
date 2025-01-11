@@ -28,8 +28,19 @@ function checkLogin() {
         loginForm.style.display = "none";
         message.textContent = "Access Granted!";
         message.style.color = "green";
+
+        // Trigger loading of the functionality from script.js after login
+        initializeApp();
     } else {
         message.textContent = "Incorrect Username or Password. Try Again.";
         message.style.color = "red";
     }
+}
+
+// Function to initialize the app functionality after successful login
+function initializeApp() {
+    const scriptTag = document.createElement("script");
+    scriptTag.src = "script.js";
+    scriptTag.type = "text/javascript";
+    document.head.appendChild(scriptTag);
 }
