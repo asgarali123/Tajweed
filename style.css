@@ -103,7 +103,8 @@ h1, h2, h3, h4, p, a, button, .btn, .card-body, th, td, tr, table, strong {
 
 /* RTL Wrapper */
 .rtl-wrapper {
-  direction: rtl;
+  direction: rtl; /* Sets the text direction to right-to-left */
+  text-align: right; /* Ensures text alignment is to the right */
 }
 
 /* Table Styling */
@@ -145,7 +146,8 @@ thead {
 
 /* RTL Wrapper */
 .rtl-wrapper {
-  direction: rtl;
+  direction: rtl; /* Sets the text direction to right-to-left */
+  text-align: right; /* Ensures text alignment is to the right */
 }
 
 /* Table Styling */
