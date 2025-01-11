@@ -35,3 +35,30 @@ function playSound(audioFile) {
     var audio = new Audio(audioFile);
     audio.play();
 }
+
+// JavaScript to control the overlay behavior
+
+document.addEventListener('DOMContentLoaded', function () {
+    const overlay = document.getElementById('messageOverlay');
+    const closeButton = document.getElementById('overlayButton');
+
+    // Show the overlay when the page loads
+    overlay.style.display = 'flex';
+
+    // Show the close button after a short delay for better UX
+    setTimeout(() => {
+        closeButton.classList.remove('hidden');
+    }, 2000); // 2-second delay
+
+    // Close the overlay when the close button is clicked
+    closeButton.addEventListener('click', function () {
+        overlay.style.display = 'none';
+    });
+
+    // Close the overlay if the user clicks outside the content area
+    overlay.addEventListener('click', function (event) {
+        if (event.target === overlay) {
+            overlay.style.display = 'none';
+        }
+    });
+});
