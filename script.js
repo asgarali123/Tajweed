@@ -62,3 +62,19 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     });
 });
+
+// Function to show the overlay and button with delays
+window.onload = function() {
+  const overlay = document.getElementById('messageOverlay');
+  const button = document.getElementById('overlayButton');
+  // Show overlay immediately
+  overlay.style.display = 'flex';
+  // Show button after 3 seconds
+  setTimeout(() => {
+    button.classList.remove('hidden');
+  }, 3000);
+  // Optional: Hide overlay when button is clicked
+  button.onclick = function() {
+    overlay.style.display = 'none';
+  };
+};
